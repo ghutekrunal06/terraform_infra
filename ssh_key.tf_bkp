@@ -1,0 +1,4 @@
+resource "aws_key_pair" "create_sshkey" {
+  key_name   = "ssh-key"
+  public_key = file("${path.module}/id_rsa.pub")
+}
